@@ -1,0 +1,97 @@
+body {
+    background-color: rgb(36, 32, 32);
+    height: 100vh;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+    >.box {
+        width: 380px;
+        height: 90px;
+        /* border: 1px solid black; */
+        margin: 300px auto;
+
+        >a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            transition-duration: .4s;
+            transition-delay: 1s;
+            overflow: hidden;
+            color: rgb(92, 196, 161);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 30px;
+            position: relative;
+
+            &:hover {
+                color: rgb(36, 66, 70);
+                background-color: rgb(92, 196, 161);
+                box-shadow: 0 0 100px rgb(63, 197, 153) , 0 0 200px rgb(128, 209, 182);
+            }
+
+
+            &:hover>span:nth-of-type(1) {
+                right: -100%;
+            }
+
+            &:hover>span:nth-of-type(2) {
+                bottom: -100%;
+            }
+
+            &:hover>span:nth-of-type(3) {
+                left: -100%;
+            }
+
+            &:hover>span:nth-of-type(4) {
+                top: -100%;
+            }
+
+            >span {
+                &:nth-of-type(odd) {
+                    width: 100%;
+                    height: 2px;
+                }
+
+                &:nth-of-type(even) {
+                    width: 2px;
+                    height: 100%;
+                }
+
+                position: absolute;
+
+                &:nth-of-type(1) {
+                    transition-duration: 0.6s;
+                    top: 0;
+                    right: 100%;
+                    background: linear-gradient(90deg, transparent,rgb(92, 196, 161));
+                }
+
+                &:nth-of-type(2) {
+                    transition-duration: .6s;
+                    transition-delay: .25s;
+                    right: 0;
+                    bottom: 100%;
+                    background: linear-gradient(180deg, transparent,rgb(92, 196, 161));
+                }
+
+                &:nth-of-type(3) {
+                    transition-duration: .6s;
+                    transition-delay: .5s;
+                    bottom: 0;
+                    left: 100%;
+                    background: linear-gradient(270deg, transparent, rgb(92, 196, 161));
+                }
+
+                &:nth-of-type(4) {
+                    transition-duration: .6s;
+                    transition-delay: .75s;
+                    left: 0;
+                    top: 100%;
+                    background: linear-gradient(360deg, transparent,rgb(92, 196, 161));
+                }
+            }
+        }
+    }
+}
